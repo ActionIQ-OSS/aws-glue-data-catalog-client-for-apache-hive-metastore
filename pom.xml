@@ -28,7 +28,7 @@
     <surefire.version>2.15</surefire.version>
     <powermock.version>1.6.4</powermock.version>
     <!-- https://github.com/ActionIQ/hadoop -->
-    <hadoop.version>2.9.2-aiq8</hadoop.version>
+    <hadoop.version>2.9.2-aiq9</hadoop.version>
     <maven.eclipse.plugin.version>2.9</maven.eclipse.plugin.version>
     <hamcrest.version>1.3</hamcrest.version>
     <httpclient.version>4.5.13</httpclient.version>
