@@ -120,7 +120,7 @@ AIQ DEV
 # set the version (bump to the next -aiq#)
 mvn versions:set -DgenerateBackupPoms=false -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2
 
-# build, this places artifacts in ~/.m2/repository/org/spark-project/hive/
+# build, this places artifacts in ~/.m2/repository/com/amazonaws/glue/
 mvn clean install -DskipTests -Dmaven.javadoc.skip=true -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2
 
 # run tests
