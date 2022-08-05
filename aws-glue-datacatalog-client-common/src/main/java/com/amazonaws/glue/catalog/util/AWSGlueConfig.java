@@ -11,6 +11,7 @@ public final class AWSGlueConfig {
   public static final String AWS_CATALOG_CREDENTIALS_PROVIDER_FACTORY_CLASS
       = "aws.catalog.credentials.provider.factory.class";
 
+  public static final String AWS_CHECK_DEFAULT_DATABASE = "aws.glue.aiq.check.default.db";
   public static final String AWS_GLUE_MAX_RETRY = "aws.glue.max-error-retries";
   public static final int DEFAULT_MAX_RETRY = 5;
 

@@ -3,6 +3,7 @@ package com.amazonaws.glue.catalog.metastore;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.glue.catalog.converters.CatalogToHiveConverter;
 import com.amazonaws.glue.catalog.converters.HiveToCatalogConverter;
+import com.amazonaws.glue.catalog.util.AWSGlueConfig
 import com.amazonaws.glue.catalog.util.BatchDeletePartitionsHelper;
 import com.amazonaws.glue.catalog.util.ExpressionHelper;
 import com.amazonaws.glue.catalog.util.LoggingHelper;
@@ -138,8 +139,10 @@ public class AWSCatalogMetastoreClient implements IMetaStoreClient {
 
     snapshotActiveConf();
     catalogId = MetastoreClientUtils.getCatalogId(conf);
-    if (!doesDefaultDBExist()) {
-      createDefaultDatabase();
+    if (this.conf.getBoolean(AWSGlueConfig.AWS_CHECK_DEFAULT_DATABASE, true)) {
+      if (!doesDefaultDBExist()) {
+        createDefaultDatabase();
+      }
     }
   }
 
