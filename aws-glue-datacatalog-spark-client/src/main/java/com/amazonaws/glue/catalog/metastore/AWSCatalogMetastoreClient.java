@@ -3,7 +3,7 @@ package com.amazonaws.glue.catalog.metastore;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.glue.catalog.converters.CatalogToHiveConverter;
 import com.amazonaws.glue.catalog.converters.HiveToCatalogConverter;
-import com.amazonaws.glue.catalog.util.AWSGlueConfig
+import com.amazonaws.glue.catalog.util.AWSGlueConfig;
 import com.amazonaws.glue.catalog.util.BatchDeletePartitionsHelper;
 import com.amazonaws.glue.catalog.util.ExpressionHelper;
 import com.amazonaws.glue.catalog.util.LoggingHelper;
