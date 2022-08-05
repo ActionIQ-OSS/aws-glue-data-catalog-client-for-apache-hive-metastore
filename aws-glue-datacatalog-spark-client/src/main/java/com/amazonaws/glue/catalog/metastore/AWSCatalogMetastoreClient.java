@@ -222,8 +222,10 @@ public class AWSCatalogMetastoreClient implements IMetaStoreClient {
      * metastore glueClient is instantiated. For now, simply copying the
      * functionality in the thrift server
      */
-    if(builder.createDefaults && !doesDefaultDBExist()) {
-      createDefaultDatabase();
+    if (this.conf.getBoolean(AWSGlueConfig.AWS_CHECK_DEFAULT_DATABASE, true)) {
+      if (builder.createDefaults && !doesDefaultDBExist()) {
+        createDefaultDatabase();
+      }
     }
   }
 
