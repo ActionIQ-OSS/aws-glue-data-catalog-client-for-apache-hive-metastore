@@ -116,8 +116,16 @@ This library is licensed under the Apache 2.0 License.
 
 ## AIQ DEV
 # Prereqs
+Run `mvn -version` to make sure you have Maven using Java 1.8, if not set to wherever it is on your machine.
 ```
-brew install maven
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
+```
+
+Before starting, get a clean state
+```
+rm -rf ~/.m2/repository
+mvn clean
 ```
 
 # Version
