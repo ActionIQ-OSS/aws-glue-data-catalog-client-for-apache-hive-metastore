@@ -4,7 +4,7 @@
 
   <groupId>com.amazonaws.glue</groupId>
   <artifactId>aws-glue-datacatalog-hive-client</artifactId>
-  <version>3.4.0-SNAPSHOT</version>
+  <version>3.4.0-aiq1</version>
     <modules>
       <module>aws-glue-datacatalog-client-common</module>
       <module>aws-glue-datacatalog-spark-client</module>
@@ -33,6 +33,19 @@
     <httpclient.version>4.5.3</httpclient.version>
     <checkstyle.config.location>${basedir}/dev-support/check_style.xml</checkstyle.config.location>
   </properties>
+
+  <distributionManagement>
+    <repository>
+      <id>aiq-releases-artifactory</id>
+      <name>AWS Artifactory SBT</name>
+      <url>https://actioniq.jfrog.io/artifactory/aiq-sbt-local</url>
+    </repository>
+    <snapshotRepository>
+      <id>aiq-snapshots-artifactory</id>
+      <name>AWS Artifactory SBT</name>
+      <url>https://actioniq.jfrog.io/artifactory/aiq-sbt-local</url>
+    </snapshotRepository>
+  </distributionManagement>
 
   <build>
     <pluginManagement>
